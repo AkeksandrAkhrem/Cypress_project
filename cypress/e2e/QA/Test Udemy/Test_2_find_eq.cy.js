@@ -10,8 +10,6 @@ describe('Test udemy 2', () => {
         // cy.get('.sc-kqGoIF > :nth-child(1) > :nth-child(8)')  // не работает на данном сайте 
         cy.get('div').find('ul').find('li').find('a').eq(2) // работате прошли по вложенностям
 
-        //comment
-
     })
 
 })
