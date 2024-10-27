@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Test 1 Udemy', () => {
 
     it('By ID', () => {
@@ -42,10 +44,19 @@ describe('Test 1 Udemy', () => {
 
     })
 
-    it.only('By Dofferent Tag', () => {
+    it('By Dofferent Tag', () => {
 
         cy.visit('https://vk.com/');
         cy.get('.FlatButton--positive')  //через прицел, все ок
+
+
+    })
+
+    it.only('snapshot', () => {
+
+        cy.visit('https://vk.com/');
+        cy.wait(3000).document().toMutchImageSnapshot()
+
 
     })
 })
